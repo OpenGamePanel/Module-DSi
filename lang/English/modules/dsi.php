@@ -21,13 +21,9 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  */
-#####################################################################
-# English language variables
-#
-#####################################################################
 
-define("dsi_long", "Dynamic Server Image");
-define("dsi_select_server", "Please, choose a Server from dropdown");
-define("dsi_admin_long", "Dynamic Server Image Settings");
-define("dsi_list", "Dynamic Server Image List");
+define('dsi_long', "Dynamic Server Image");
+define('dsi_select_server', "Please choose a server from the drop-down list");
+define('dsi_admin_long', "Dynamic Server Image Settings");
+define('dsi_list', "Dynamic Server Image List");
 ?>
