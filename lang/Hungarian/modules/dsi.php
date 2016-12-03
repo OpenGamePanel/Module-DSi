@@ -23,7 +23,7 @@
  */
 
 define('dsi_long', "Dinamikus szerver kép");
-define('dsi_select_server', "Kérlek válassz egy szervert a legördülő listából");
+define('dsi_select_server', "Kérlek, válassz egy szervert a legördülő listából");
 define('dsi_admin_long', "Dinamikus szerver kép beállítások");
 define('dsi_list', "Dinamikus szerver kép lista");
 ?>
