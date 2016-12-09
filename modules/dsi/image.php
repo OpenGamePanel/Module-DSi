@@ -194,7 +194,7 @@ if($do_new){
 			pretty_text_ttf($im,$size2,0,18,10,$text_color0,$text_font0,substr($name,0,45), $txt_outline); // Servername
 			pretty_text_ttf($im,$size3,0,2,24,$text_color0,$text_font1,$ip.":".$port, $txt_outline); // IP:Port
 			pretty_text_ttf($im,$size3,0,135,24,$text_color0,$text_font1,$map, $txt_outline); // Map
-			pretty_text_ttf($im,$size3,0,240,24,$text_color0,$text_font1,$players."/".$playersmax, $txt_outline); // Players
+			pretty_text_ttf($im,$size3,0,295,10,$text_color0,$text_font1,$players."/".$playersmax, $txt_outline); // Players
 			pretty_text_ttf($im,$size3,0,295,24,$text_color0,$text_font1,$status, $txt_outline); // Status
 		break;
 		
