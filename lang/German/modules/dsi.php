@@ -23,7 +23,7 @@
  */
 
 define('dsi_long', "Dynamic Server Image");
-define('dsi_select_server', "Please choose a server from the drop-down list");
+define('dsi_select_server', "Bitte wählen Sie einen Server aus der Dropdown-Liste");
 define('dsi_admin_long', "Dynamic Server Image Settings");
 define('dsi_list', "Dynamic Server Image List");
 ?>
