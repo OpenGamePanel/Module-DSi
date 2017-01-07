@@ -26,4 +26,5 @@ define('dsi_long', "Dinamikus szerver kép");
 define('dsi_select_server', "Kérlek, válassz egy szervert a legördülő listából");
 define('dsi_admin_long', "Dinamikus szerver kép beállítások");
 define('dsi_list', "Dinamikus szerver kép lista");
+define('no_game_homes_assigned', "No game servers assigned for you. You need to ask your OGP admin to assign games for you.");
 ?>

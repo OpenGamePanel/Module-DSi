@@ -26,4 +26,5 @@ define('dsi_long', "Dynamic Server Image");
 define('dsi_select_server', "Veuillez choisir un Serveur dans le menu déroulant");
 define('dsi_admin_long', "Paramètres Dynamic Server Image");
 define('dsi_list', "Dynamic Server Image");
+define('no_game_homes_assigned', "No game servers assigned for you. You need to ask your OGP admin to assign games for you.");
 ?>
