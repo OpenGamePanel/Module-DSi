@@ -199,7 +199,23 @@ if($do_new){
 		break;
 		
 		case "sky":
-			if($status != "offline"){ $img_map = curlCacheImage(get_map_path($query_name, $mod, $map)); }
+			if($status != "offline"){ 
+				$mapFile = get_map_path($query_name, $mod, $map);
+				if(cURLEnabled()){
+					$img_map = curlCacheImage(DSI_BASEPATH, $mapFile); 
+				}else{
+					stream_context_set_default(
+						array(
+							'http' => array(
+								'method' => 'GET',
+								'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0',
+								'header'=>'Referer: http://gametracker.com'
+							)
+						)
+					);
+					$img_map = $mapFile;
+				}
+			}
 			else { $img_map = DSI_BASEPATH."images/offline_bg.png"; }
 			$im_map_info = getimagesize($img_map);
 			if ($im_map_info[2] == 1) { $im_map = imagecreatefromgif($img_map);  }
