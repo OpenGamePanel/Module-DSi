@@ -199,7 +199,7 @@ if($do_new){
 		break;
 		
 		case "sky":
-			if($status != "offline"){ $img_map = get_map_path($query_name,$mod,$map); }
+			if($status != "offline"){ $img_map = curlCacheImage(get_map_path($query_name, $mod, $map)); }
 			else { $img_map = DSI_BASEPATH."images/offline_bg.png"; }
 			$im_map_info = getimagesize($img_map);
 			if ($im_map_info[2] == 1) { $im_map = imagecreatefromgif($img_map);  }

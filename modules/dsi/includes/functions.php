@@ -91,6 +91,31 @@ function dsi_get_bg($query_name, $mod, $type){
 	else{ return DSI_BASEPATH."images/default_".$type.".png"; }
 }
 
+// Thanks adjo
+// http://opengamepanel.org/forum/viewthread.php?thread_id=5209#post_25073
+function curlCacheImage($resource){
+   if(preg_match('/^(https?:\/\/)/', $resource)){
+      $map = explode('/', $resource);
+      
+      if(!file_exists(DSI_BASEPATH . '/cache/' . end($map))){
+         $ch = curl_init();
+         curl_setopt($ch, CURLOPT_HEADER, 0);
+         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+         curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0');
+         curl_setopt($ch, CURLOPT_REFERER, 'http://gametracker.com');
+         curl_setopt($ch, CURLOPT_URL, $resource);
+         $result = curl_exec($ch);
+         curl_close($ch);
+         
+         file_put_contents(DSI_BASEPATH . '/cache/' . end($map), $result);
+      }
+      
+      return DSI_BASEPATH . '/cache/' . end($map);
+   }
+   
+   return $resource;
+}
+
 function pretty_text($im, $fontsize, $x, $y, $string, $color, $outline = false) {
 	$black  = imagecolorallocate($im, 0, 0, 0);
 
