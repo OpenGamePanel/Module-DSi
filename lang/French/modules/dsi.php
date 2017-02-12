@@ -1,31 +1,30 @@
 <?php
 /*
- * Dynamic Server Image module for Open Game Panel
- * Copyright (C) 2012 SpiffyTek
  *
- * http://spiffytek.com/
+ * OGP - Open Game Panel
+ * Copyright (C) 2008 - 2016 The OGP Development Team
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 3 as published by
- * the Free Software Foundation.
- * 
+ * http://www.opengamepanel.org/
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or any later version.
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  *
  */
 
-# USER
-define("dsi_long", "Dynamic Server Image");
-define("dsi_select_server", "Veuillez choisir un Server dans le menu d�roulant");
-
-# ADMIN
-define("dsi_admin_long", "Param�tres Dynamic Server Image");
-
-# GUEST
-define("dsi_list", "Dynamic Server Image");
+define('dsi_long', "Dynamic Server Image");
+define('dsi_select_server', "Veuillez choisir un Serveur dans le menu déroulant");
+define('dsi_admin_long', "Paramètres Dynamic Server Image");
+define('dsi_list', "Dynamic Server Image");
+define('no_game_homes_assigned', "Aucun serveur de jeu ne vous est assigné. Vous devez demander à votre Administrateur de vous assigner un serveur.");
 ?>

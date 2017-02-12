@@ -3,7 +3,8 @@
 /* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 2; tab-width: 2 -*- */
 /* geoip.inc
  *
- * Copyright (C) 2007 MaxMind LLC
+ * Copyright (C) 2016 MaxMind LLC
+ * This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
