@@ -22,7 +22,7 @@
 
 // Module general information
 $module_title = "Dynamic Server Image";
-$module_version = "1.0 alpha 2";
+$module_version = "1.0.1";
 $db_version = 0;
 $module_required = false;
 $module_menus = array( 
