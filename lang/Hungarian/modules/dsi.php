@@ -2,7 +2,7 @@
 /*
  *
  * OGP - Open Game Panel
- * Copyright (C) 2008 - 2016 The OGP Development Team
+ * Copyright (C) 2008 - 2017 The OGP Development Team
  *
  * http://www.opengamepanel.org/
  *
@@ -26,5 +26,5 @@ define('dsi_long', "Dinamikus szerver kép");
 define('dsi_select_server', "Kérlek, válassz egy szervert a legördülő listából");
 define('dsi_admin_long', "Dinamikus szerver kép beállítások");
 define('dsi_list', "Dinamikus szerver kép lista");
-define('no_game_homes_assigned', "Nincsenek játékszerverek hozzád rendelve. Meg kell kérned az OGP Adminodat hogy rendeljen hozzád játékot neked.");
+define('no_game_homes_assigned', "Nincsenek játékszerverek hozzád rendelve. Meg kell kérned az OGP adminisztrátorodat, hogy rendeljen hozzád játékot neked.");
 ?>
