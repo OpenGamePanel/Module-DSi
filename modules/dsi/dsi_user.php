@@ -74,11 +74,12 @@ function exec_ogp_module(){
 			$server_home['ip']      == $ip and
 			$server_home['port']    == $port )
 		{
+			$public_ip = checkDisplayPublicIP($server_home['display_public_ip'],$server_home['ip']);
 			$server_xml = read_server_config(SERVER_CONFIG_LOCATION."/".$server_home['home_cfg_file']);
 			$url = false;
 			if ($server_xml->protocol == "lgsl"){
 				list($c_port, $q_port, $s_port) = lgsl_port_conversion($server_xml->lgsl_query_name, $server_home['port'], "", "");
-				$url = lgsl_software_link($server_xml->lgsl_query_name, $server_home['ip'], $c_port, $q_port, $s_port);
+				$url = lgsl_software_link($server_xml->lgsl_query_name, $public_ip, $c_port, $q_port, $s_port);
 			}
 			else if ($server_xml->protocol == "gameq"){
 				$query_port = get_query_port($server_xml, $server_home['port']);
@@ -86,7 +87,7 @@ function exec_ogp_module(){
 				$server = array(
 									'id' => 'server',
 									'type' => $server_xml->gameq_query_name,
-									'host' => $server_home['ip'] . ":" . $query_port,
+									'host' => $public_ip . ":" . $query_port,
 								);
 				$gq->addServer($server);
 				$gq->setOption('timeout', 1);
@@ -99,13 +100,13 @@ function exec_ogp_module(){
 				else
 				{
 					if($server_xml->installer == "steamcmd")
-						$url = "steam://connect/$server_home[ip]:$server_home[port]";
+						$url = "steam://connect/$public_ip:$server_home[port]";
 					else
 						$url = "#Notavailable";
 				}
 			}
 			else if ($server_xml->protocol == "teamspeak3"){
-				$url = "ts3server://$server_home[ip]:$server_home[port]";
+				$url = "ts3server://$public_ip:$server_home[port]";
 			}
 			echo dsi_render_table($server_home["ip"], $server_home["port"],$url);
 			break;

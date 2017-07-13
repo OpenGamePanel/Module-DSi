@@ -175,7 +175,7 @@ if($do_new){
 			break;
 		}
 	}
-	
+	$ip = checkDisplayPublicIP($server_home['display_public_ip'],$server_home['ip']);
 	/* Render types */
 	switch($type){
 		case "normal":
