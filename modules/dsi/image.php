@@ -98,7 +98,7 @@ if($do_new){
 	else if ($server_xml->protocol == "teamspeak3"){
 		ini_set('date.timezone', $settings['time_zone']);
 		require_once('protocol/TeamSpeak3/TS3Monitor.php');
-		$query_name = preg_replace("/[^a-z0-9_]/", "-", strtolower($server_xml->mods->mod['key']));
+		$query_name = 'ts3';
 	}
 	else {
 		$query_name = preg_replace("/[^a-z0-9_]/", "-", strtolower($server_xml->mods->mod['key']));
@@ -120,8 +120,8 @@ if($do_new){
 	}
 	
 	$icon_paths = array("images/icons/$mod.png",
-								"images/icons/$query_name.png",								
-								"images/countries/noflag.png"); 
+						"images/icons/$query_name.png",								
+						"images/countries/noflag.png"); 
 	$icoimg = get_first_existing_file($icon_paths);
 	$icoimage_info = getimagesize($icoimg);
 	$icoimage = imagecreatefrompng($icoimg);
