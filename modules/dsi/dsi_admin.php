@@ -74,6 +74,9 @@ function exec_ogp_module(){
 			elseif ($server_xml->protocol == "lgsl"){
 				$query_name = $server_xml->lgsl_query_name;
 			}
+			elseif ($server_xml->protocol == "teamspeak3"){
+				$query_name = 'ts3';
+			}
 			else{
 				$query_name = $mod; /* If query name does not exist use mod key instead. */
 			}
