@@ -56,8 +56,8 @@ function dsi_render_table($ip, $port, $public_ip, $url = false, $use_table = TRU
 						"\t\t<td align='right' width=30px >\n".
 						"\t\t\t<b>Codes</b>".
 						"\t\t</td>\n".
-						"\t\t<td align='left' ><input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["bb_type_a"]."[img]$base_url/" . DSI_BASEPATH . "s-${public_ip}_${port}-${type}.png[/img]".$link["bb_close"]."' /><br />\n".
-						"\t\t\t<input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["bb_type_b"]."[img]$base_url/" . DSI_BASEPATH . "s-${public_ip}_${port}-${type}.png[/img]".$link["bb_close"]."' /><br />\n".
+						"\t\t<td align='left' ><input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["bb_type_a"]."[img]$base_url/" . DSI_BASEPATH . "s-${ip}_${port}-${type}.png[/img]".$link["bb_close"]."' /><br />\n".
+						"\t\t\t<input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["bb_type_b"]."[img]$base_url/" . DSI_BASEPATH . "s-${ip}_${port}-${type}.png[/img]".$link["bb_close"]."' /><br />\n".
 						"\t\t\t<input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["href"]."<img src=\"$base_url/" . DSI_BASEPATH . "s-${ip}_${port}-${type}.png\">".$link["href_close"]."' />\n".
 						"\t\t</td>\n";
 		if($use_rows) $output .= "\t</tr>\n";
