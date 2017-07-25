@@ -28,7 +28,7 @@ function dsi_render_table($ip, $port, $public_ip, $url = false, $use_table = TRU
 		$link["bb_close"] = "[/url]";
 		$link["bb_type_a"] = "[url=".$url."]";
 		$link["bb_type_b"] = "[url=\"".$url."\"]";	
-		$link["href"] = "<a href=\"".$url."\" >";
+		$link["href"] = "<a href=\"".$url."\">";
 		$link["href_close"] = "</a>";
 	}
 	
