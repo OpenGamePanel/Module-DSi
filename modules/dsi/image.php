@@ -99,12 +99,16 @@ if($do_new){
 		ini_set('date.timezone', $settings['time_zone']);
 		require_once('protocol/TeamSpeak3/TS3Monitor.php');
 		$query_name = 'ts3';
+		$mod = 'ts3';
 	}
 	else {
 		$query_name = preg_replace("/[^a-z0-9_]/", "-", strtolower($server_xml->mods->mod['key']));
 	}
 	
-	$mod = preg_replace("/[^a-z0-9_]/", "-", strtolower($server_xml->mods->mod['key']));
+	
+	if(!isset($mod)){
+		$mod = preg_replace("/[^a-z0-9_]/", "-", strtolower($server_xml->mods->mod['key']));
+	}
 	
 	if (file_exists(DSI_BASEPATH."geoip.inc.php")){
 		$geoip = false;
@@ -133,7 +137,8 @@ if($do_new){
 	}
 	
 	/* Start image */
-	$im = imagecreatefrompng(dsi_get_bg($query_name, $mod, $type));
+	$path = dsi_get_bg($query_name, $mod, $type);
+	$im = imagecreatefrompng($path);
 	
 	/* Text formatting */
 	$text_font0 = DSI_BASEPATH."fonts/Cyberbas.ttf";
@@ -248,6 +253,4 @@ if($do_new){
 else{
 	dsi_make_img(false, true, $cache, true);
 }
-
-
 ?>
