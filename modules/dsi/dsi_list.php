@@ -92,7 +92,6 @@ function exec_ogp_module(){
 			$port = $server_home['port'];
 			
 			$url = false;
-			$public_ip = checkDisplayPublicIP($server_home['display_public_ip'], $server_home['ip']);
 			$server_xml = read_server_config(SERVER_CONFIG_LOCATION."/".$server_home['home_cfg_file']);
 			if ($server_xml->protocol == "lgsl"){
 				list($c_port, $q_port, $s_port) = lgsl_port_conversion($server_xml->lgsl_query_name, $port, "", "");
