@@ -65,6 +65,7 @@ function exec_ogp_module(){
 			$server_home['port']    == $port )
 		{
 			$server_xml = read_server_config(SERVER_CONFIG_LOCATION."/".$server_home['home_cfg_file']);
+			$public_ip = checkDisplayPublicIP($server_home['display_public_ip'], $server_home['ip']);
 			
 			$mod = preg_replace("/[^a-z0-9_]/", "-", strtolower($server_home['mod_key']));
 			
@@ -156,7 +157,7 @@ function exec_ogp_module(){
 			  </td>
 			 </tr>
 			<?php
-			echo dsi_render_table($server_home["ip"], $server_home["port"], FALSE, FALSE, TRUE, FALSE, TRUE);
+			echo dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, FALSE, FALSE, TRUE, FALSE, TRUE);
 			break;
 		}
 	}

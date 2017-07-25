@@ -87,7 +87,9 @@ function dsi_make_img($im = false, $cache_on = false, $cache_data = false){
 
 function dsi_get_bg($query_name, $mod, $type){
 	$img = DSI_BASEPATH."images/".$query_name."/".$mod."_".$type.".png";
-	if(file_exists($img)){ return $img; }
+	if(file_exists($img)){ 
+		return $img; 
+	}
 	else{ return DSI_BASEPATH."images/default_".$type.".png"; }
 }
 

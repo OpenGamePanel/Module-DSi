@@ -77,18 +77,21 @@ function exec_ogp_module(){
 	foreach ( $server_homes as $server_home )
 	{
 		$servers++;
+		
+		// Get display IP
+		$public_ip = checkDisplayPublicIP($server_home['display_public_ip'], $server_home['ip']);
+		
 		$remote = new OGPRemoteLibrary($server_home['agent_ip'], $server_home['agent_port'], $server_home['encryption_key'], $server_home['timeout']);
 		$screen_running = $remote->is_screen_running(OGP_SCREEN_TYPE_HOME,$server_home['home_id']) === 1;
 		if($screen_running) $servers_running++;
 		if( ( $online and $screen_running ) OR ( isset( $_GET['home_id-mod_id-ip-port'] ) 
 						 and $_GET['home_id-mod_id-ip-port'] == 
 						 $server_home['home_id'].'-'.$server_home['mod_id'].'-'.
-						 $server_home['ip'].'-'.$server_home['port'] ) OR ( !$online and $show_all ) )	
+						 $public_ip.'-'.$server_home['port'] ) OR ( !$online and $show_all ) )	
 		{
 			$port = $server_home['port'];
 			
 			$url = false;
-			$public_ip = checkDisplayPublicIP($server_home['display_public_ip'],$server_home['ip']);
 			$server_xml = read_server_config(SERVER_CONFIG_LOCATION."/".$server_home['home_cfg_file']);
 			if ($server_xml->protocol == "lgsl"){
 				list($c_port, $q_port, $s_port) = lgsl_port_conversion($server_xml->lgsl_query_name, $port, "", "");
@@ -144,11 +147,11 @@ function exec_ogp_module(){
 			
 			if( isset($_GET['home_id-mod_id-ip-port']) )
 			{
-				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $url, FALSE, TRUE);
+				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, $url, FALSE, TRUE);
 			}
 			else
 			{
-				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $url, FALSE, FALSE, FALSE, $screen_running, TRUE, $type);
+				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, $url, FALSE, FALSE, FALSE, $screen_running, TRUE, $type);
 			}
 			if ($counter == $cols) 
 			{
