@@ -147,11 +147,11 @@ function exec_ogp_module(){
 			
 			if( isset($_GET['home_id-mod_id-ip-port']) )
 			{
-				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $url, FALSE, TRUE);
+				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, $url, FALSE, TRUE);
 			}
 			else
 			{
-				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $url, FALSE, FALSE, FALSE, $screen_running, TRUE, $type);
+				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, $url, FALSE, FALSE, FALSE, $screen_running, TRUE, $type);
 			}
 			if ($counter == $cols) 
 			{

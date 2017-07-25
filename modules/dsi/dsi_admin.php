@@ -157,7 +157,7 @@ function exec_ogp_module(){
 			  </td>
 			 </tr>
 			<?php
-			echo dsi_render_table($server_home["ip"], $server_home["port"], FALSE, FALSE, TRUE, FALSE, TRUE);
+			echo dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, FALSE, FALSE, TRUE, FALSE, TRUE);
 			break;
 		}
 	}
