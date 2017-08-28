@@ -22,9 +22,9 @@
  *
  */
 
-define('dsi_long', "Dynamic Server Image");
-define('dsi_select_server', "Please choose a server from the drop-down list");
-define('dsi_admin_long', "Dynamic Server Image Settings");
-define('dsi_list', "Dynamic Server Image List");
-define('no_game_homes_assigned', "No game servers assigned for you. You need to ask your OGP admin to assign games for you.");
+define('dsi_long', "Imagem dinâmica do servidor");
+define('dsi_select_server', "Escolha um servidor na lista suspensa");
+define('dsi_admin_long', "Configurações da imagem do servidor dinâmico");
+define('dsi_list', "Lista de imagens do servidor dinâmico");
+define('no_game_homes_assigned', "Nenhum servidor de jogos foi atribuído para você. Você precisa pedir ao seu administrador do painel para atribuir jogos para você.");
 ?>
