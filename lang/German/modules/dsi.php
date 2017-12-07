@@ -22,9 +22,9 @@
  *
  */
 
-define('dsi_long', "Dynamisches Server Abbild");
-define('dsi_select_server', "Bitte wählen Sie einen Server aus der Dropdown-Liste");
-define('dsi_admin_long', "Dynamisches Server Abbild Einstellungen");
-define('dsi_list', "Dynamisches Server Abbild Liste");
-define('no_game_homes_assigned', "Es wurden Ihnen keine Gameserver zugewiesen. Sie müssen einen OGP Admin bitten, sich einen Gameserver zuweisen zu lassen.");
+define('OGP_LANG_dsi_long', "Dynamisches Server Abbild");
+define('OGP_LANG_dsi_select_server', "Bitte wählen Sie einen Server aus der Dropdown-Liste");
+define('OGP_LANG_dsi_admin_long', "Dynamisches Server Abbild Einstellungen");
+define('OGP_LANG_dsi_list', "Dynamisches Server Abbild Liste");
+define('OGP_LANG_no_game_homes_assigned', "Es wurden Ihnen keine Gameserver zugewiesen. Sie müssen einen OGP Admin bitten, sich einen Gameserver zuweisen zu lassen.");
 ?>
