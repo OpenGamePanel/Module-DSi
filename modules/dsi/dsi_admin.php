@@ -35,11 +35,11 @@ function exec_ogp_module(){
         print_failure(get_lang('no_game_homes_assigned'));
 
         echo "<p><a href='?m=user_games&amp;p=assign&amp;user_id=$_SESSION[user_id]'>" .
-			 assign_game_homes . "</a></p>";
+			 get_lang("assign_game_homes") . "</a></p>";
         return;
     }
 	
-	echo dsi_select_server;
+	echo get_lang("dsi_select_server");
 	create_home_selector_address($_GET['m'], $_GET['p'], $server_homes);
 	
 	if( isset($_GET['home_id-mod_id-ip-port']) and $_GET['home_id-mod_id-ip-port'] != "")

@@ -38,7 +38,7 @@ function exec_ogp_module(){
 	if( $server_homes === FALSE )
     {
         // If there are no games, then there can not be any mods either.
-        print_failure( no_game_homes_assigned );
+        print_failure( get_lang("no_game_homes_assigned") );
         if ( $isAdmin )
         {
             echo "<p><a href='?m=user_games&amp;p=assign&amp;user_id=$_SESSION[user_id]'>".
@@ -47,7 +47,7 @@ function exec_ogp_module(){
         return;
     }
 		
-	echo dsi_select_server;
+	echo get_lang("dsi_select_server");
 	create_home_selector_address($_GET['m'], $_GET['p'], $server_homes);
 
 	if( isset($_GET['home_id-mod_id-ip-port']) and $_GET['home_id-mod_id-ip-port'] != "")

@@ -37,7 +37,7 @@ function exec_ogp_module(){
 	if ( isset($_GET['home_id-mod_id-ip-port']) AND $_GET['home_id-mod_id-ip-port'] == "" )
 		unset( $_GET['home_id-mod_id-ip-port'] );
 	
-	echo dsi_select_server;
+	echo get_lang("dsi_select_server");
 	if (!isset($_GET['home_id-mod_id-ip-port']) and !$online) 
 	{	
 		create_home_selector_address($_GET['m'], $_GET['p'], $server_homes);
@@ -68,7 +68,7 @@ function exec_ogp_module(){
 	
 	echo $show_all ?	"\n<form method='POST' >\n".
 						"\t<button name='online' onClick='this.form.submit()' >".
-						online .
+						get_lang("online") .
 						"</button>\n".
 						"</form>\n".
 						"<br>\n" : "";
