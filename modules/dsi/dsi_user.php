@@ -74,7 +74,7 @@ function exec_ogp_module(){
 			$server_home['ip']      == $ip and
 			$server_home['port']    == $port )
 		{
-			$public_ip = checkDisplayPublicIP($server_home['display_public_ip'], $server_home['ip']);
+			$public_ip = checkDisplayPublicIP($server_home['display_public_ip'],$server_home['ip'] != $server_home['agent_ip'] ? $server_home['ip'] : $server_home['agent_ip']);
 			$server_xml = read_server_config(SERVER_CONFIG_LOCATION."/".$server_home['home_cfg_file']);
 			$url = false;
 			if ($server_xml->protocol == "lgsl"){
