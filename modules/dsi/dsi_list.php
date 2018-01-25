@@ -79,7 +79,7 @@ function exec_ogp_module(){
 		$servers++;
 		
 		// Get display IP
-		$public_ip = checkDisplayPublicIP($server_home['display_public_ip'], $server_home['ip']);
+		$public_ip = checkDisplayPublicIP($server_home['display_public_ip'],$server_home['ip'] != $server_home['agent_ip'] ? $server_home['ip'] : $server_home['agent_ip']);
 		
 		$remote = new OGPRemoteLibrary($server_home['agent_ip'], $server_home['agent_port'], $server_home['encryption_key'], $server_home['timeout']);
 		$screen_running = $remote->is_screen_running(OGP_SCREEN_TYPE_HOME,$server_home['home_id']) === 1;
