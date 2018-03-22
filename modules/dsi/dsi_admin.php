@@ -35,11 +35,11 @@ function exec_ogp_module(){
         print_failure(get_lang('no_game_homes_assigned'));
 
         echo "<p><a href='?m=user_games&amp;p=assign&amp;user_id=$_SESSION[user_id]'>" .
-			 assign_game_homes . "</a></p>";
+			 get_lang("assign_game_homes") . "</a></p>";
         return;
     }
 	
-	echo dsi_select_server;
+	echo get_lang("dsi_select_server");
 	create_home_selector_address($_GET['m'], $_GET['p'], $server_homes);
 	
 	if( isset($_GET['home_id-mod_id-ip-port']) and $_GET['home_id-mod_id-ip-port'] != "")
@@ -65,6 +65,7 @@ function exec_ogp_module(){
 			$server_home['port']    == $port )
 		{
 			$server_xml = read_server_config(SERVER_CONFIG_LOCATION."/".$server_home['home_cfg_file']);
+			$public_ip = checkDisplayPublicIP($server_home['display_public_ip'],$server_home['ip'] != $server_home['agent_ip'] ? $server_home['ip'] : $server_home['agent_ip']);
 			
 			$mod = preg_replace("/[^a-z0-9_]/", "-", strtolower($server_home['mod_key']));
 			
@@ -73,6 +74,9 @@ function exec_ogp_module(){
 			}
 			elseif ($server_xml->protocol == "lgsl"){
 				$query_name = $server_xml->lgsl_query_name;
+			}
+			elseif ($server_xml->protocol == "teamspeak3"){
+				$query_name = 'ts3';
 			}
 			else{
 				$query_name = $mod; /* If query name does not exist use mod key instead. */
@@ -153,7 +157,7 @@ function exec_ogp_module(){
 			  </td>
 			 </tr>
 			<?php
-			echo dsi_render_table($server_home["ip"], $server_home["port"], FALSE, FALSE, TRUE, FALSE, TRUE);
+			echo dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, FALSE, FALSE, TRUE, FALSE, TRUE);
 			break;
 		}
 	}

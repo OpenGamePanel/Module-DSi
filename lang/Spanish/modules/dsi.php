@@ -2,7 +2,7 @@
 /*
  *
  * OGP - Open Game Panel
- * Copyright (C) 2008 - 2016 The OGP Development Team
+ * Copyright (C) 2008 - 2017 The OGP Development Team
  *
  * http://www.opengamepanel.org/
  *
@@ -22,9 +22,9 @@
  *
  */
 
-define('dsi_long', "Imagen dinámica del servidor");
-define('dsi_select_server', "Por favor, selecciona un servidor de la lista de abajo");
-define('dsi_admin_long', "Configuración de imagen dinámica del servidor");
-define('dsi_list', "Lista de imágenes dinámicas del servidor");
-define('no_game_homes_assigned', "No tienes servidores de juego asignados. Habla con el administrador del panel para que te asigne juegos.");
+define('OGP_LANG_dsi_long', "Imagen dinámica del servidor");
+define('OGP_LANG_dsi_select_server', "Por favor, selecciona un servidor de la lista de abajo");
+define('OGP_LANG_dsi_admin_long', "Configuración de imagen dinámica del servidor");
+define('OGP_LANG_dsi_list', "Lista de imágenes dinámicas del servidor");
+define('OGP_LANG_no_game_homes_assigned', "No tienes servidores de juego asignados. Habla con el administrador del panel para que te asigne juegos.");
 ?>

@@ -2,7 +2,7 @@
 /*
  *
  * OGP - Open Game Panel
- * Copyright (C) 2008 - 2016 The OGP Development Team
+ * Copyright (C) 2008 - 2017 The OGP Development Team
  *
  * http://www.opengamepanel.org/
  *
@@ -22,9 +22,9 @@
  *
  */
 
-define('dsi_long', "Dynamisk Server Billed");
-define('dsi_select_server', "Venligst vælg en Server fra dropmenu");
-define('dsi_admin_long', "Dynamic Server Image Settings");
-define('dsi_list', "Dynamisk Server Billed Liste");
-define('no_game_homes_assigned', "No game servers assigned for you. You need to ask your OGP admin to assign games for you.");
+define('OGP_LANG_dsi_long', "Dynamisk Server Billed");
+define('OGP_LANG_dsi_select_server', "Venligst vælg en Server fra dropmenu");
+define('OGP_LANG_dsi_admin_long', "Dynamic Server Image Settings");
+define('OGP_LANG_dsi_list', "Dynamisk Server Billed Liste");
+define('OGP_LANG_no_game_homes_assigned', "No game servers assigned for you. You need to ask your OGP admin to assign games for you.");
 ?>
