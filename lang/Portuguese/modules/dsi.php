@@ -26,5 +26,5 @@ define('OGP_LANG_dsi_long', "Imagem dinâmica de servidores");
 define('OGP_LANG_dsi_select_server', "Escolha um servidor na lista suspensa");
 define('OGP_LANG_dsi_admin_long', "Definições de imagem dinâmica dos servidores");
 define('OGP_LANG_dsi_list', "Lista do servidor dinâmico de Imagem");
-define('OGP_LANG_no_game_homes_assigned', "Não foi possível encontrar algum servidor de jogos que esteja atribuído para você. Num entanto  terá que pedir ao seu administrador da painel/empresa para que lhe reserve algum servidor.");
+define('OGP_LANG_no_game_homes_assigned', "You don't have any servers assigned to your account.");
 ?>
