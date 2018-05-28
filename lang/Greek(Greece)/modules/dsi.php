@@ -22,9 +22,9 @@
  *
  */
 
-define('OGP_LANG_dsi_long', "صورة سيرفر ديناميكية");
-define('OGP_LANG_dsi_select_server', "الرجاء اختيار سيرفر من القائمة المنسدلة");
-define('OGP_LANG_dsi_admin_long', "إعدادات صورة السيرفر الديناميكية");
-define('OGP_LANG_dsi_list', "قائمة صور السيرفر الديناميكية");
-define('OGP_LANG_no_game_homes_assigned', "ليس لديك أي خوادم تم تعيينها لحسابك.");
+define('OGP_LANG_dsi_long', "Δυναμική Εικόνα Διακομιστή");
+define('OGP_LANG_dsi_select_server', "Παρακαλώ επιλέξτε έναν διακομιστή από την λίστα.");
+define('OGP_LANG_dsi_admin_long', "Ρυθμίσεις Δυναμικής Εικόνας Διακομιστή");
+define('OGP_LANG_dsi_list', "Λίστα Δυναμικής Εικόνας Διακομιστή");
+define('OGP_LANG_no_game_homes_assigned', "Δεν έχετε διακομιστές ανατεθημένους στον λογαριασμό σας.");
 ?>
