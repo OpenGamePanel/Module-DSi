@@ -26,5 +26,5 @@ define('OGP_LANG_dsi_long', "Dynamiczny obraz Serwera");
 define('OGP_LANG_dsi_select_server', "Proszę wybrać serwer z rozwijanej listy ");
 define('OGP_LANG_dsi_admin_long', "Ustawienia dynamicznych obrazów Serwera");
 define('OGP_LANG_dsi_list', "Lista dynamicznych obrazów Serwera");
-define('OGP_LANG_no_game_homes_assigned', "You don't have any servers assigned to your account.");
+define('OGP_LANG_no_game_homes_assigned', "Nie posiadasz żadnych serwerów przypisanych do Twojego konta.");
 ?>
