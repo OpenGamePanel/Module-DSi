@@ -80,7 +80,7 @@ function exec_ogp_module(){
 		else if ($server_xml->protocol == "teamspeak3"){
 			$url = "ts3server://$public_ip:$port";
 		}
-		echo dsi_render_table($ip, $port, $public_ip, $url);
+		echo dsi_render_table($ip, $port, $url);
 	}
 }
 ?>

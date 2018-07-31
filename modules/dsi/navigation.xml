@@ -2,4 +2,5 @@
   <page key="user_dsi" file="dsi_user.php" access="admin,user" />
   <page key="admin_dsi" file="dsi_admin.php" access="admin" />
   <page key="list_dsi" file="dsi_list.php" access="admin,user,guest" />
+  <page key="image" file="image.php" access="admin,user,guest" />
 </navigation>
