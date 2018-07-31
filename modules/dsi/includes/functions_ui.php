@@ -47,7 +47,7 @@ function dsi_render_table($ip, $port, $url = false, $use_table = TRUE, $use_rows
 									"\t\t</td>\n";
 		$output .=	"\t\t<td align='$image_td_align' >\n";
 		if($img_join_link) $output .= "\t\t\t{$link['href']}\n";
-		$output .=	"\t\t\t<img src='" . DSI_BASEPATH . "s-${ip}_${port}-${type}'/>\n";
+		$output .=	"\t\t\t<img src='" . DSI_BASEPATH . "s-${ip}_${port}-${type}.png'/>\n";
 		if($img_join_link) $output .= "\t\t\t{$link['href_close']}\n";
 		$output .=	"\t\t</td>\n";
 		if($show_codes)
