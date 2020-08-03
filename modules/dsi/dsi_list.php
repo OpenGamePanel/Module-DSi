@@ -99,7 +99,7 @@ function exec_ogp_module(){
 			}
 			else if ($server_xml->protocol == "gameq"){
 				$query_port = get_query_port($server_xml, $port);
-				$gq = new GameQ();
+				$gq = new \GameQ\GameQ();
 				$server = array(
 									'id' => 'server',
 									'type' => $server_xml->gameq_query_name,
@@ -108,7 +108,7 @@ function exec_ogp_module(){
 				$gq->addServer($server);
 				$gq->setOption('timeout', 1);
 				$gq->setOption('debug', FALSE);
-				$results = $gq->requestData();
+				$results = $gq->process();
 				if(isset($results['gq_joinlink']) and $results['gq_joinlink'] != "")
 				{
 					$url = $results['gq_joinlink'];
