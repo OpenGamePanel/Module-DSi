@@ -20,7 +20,7 @@
  */
 
 /* DSi functions */
-function dsi_render_table($ip, $port, $public_ip, $url = false, $use_table = TRUE, $use_rows = TRUE, $show_codes = TRUE, $img_join_link = FALSE, $img_only = FALSE, $img_type = FALSE ){
+function dsi_render_table($ip, $port, $url = false, $use_table = TRUE, $use_rows = TRUE, $show_codes = TRUE, $img_join_link = FALSE, $img_only = FALSE, $img_type = FALSE ){
 	$link = false;
 	$s = ( isset($_SERVER['HTTPS']) and get_true_boolean($_SERVER['HTTPS']) ) ? "s" : "";
 	$base_url = "http$s://".implode('/', (explode('/', $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], -1)));
@@ -47,7 +47,7 @@ function dsi_render_table($ip, $port, $public_ip, $url = false, $use_table = TRU
 									"\t\t</td>\n";
 		$output .=	"\t\t<td align='$image_td_align' >\n";
 		if($img_join_link) $output .= "\t\t\t{$link['href']}\n";
-		$output .=	"\t\t\t<img src='" . DSI_BASEPATH . "image.php?s=${ip}_${port}&type=${type}'/>\n";
+		$output .=	"\t\t\t<img src='" . DSI_BASEPATH . "s-${ip}_${port}-${type}.png'/>\n";
 		if($img_join_link) $output .= "\t\t\t{$link['href_close']}\n";
 		$output .=	"\t\t</td>\n";
 		if($show_codes)
@@ -56,9 +56,9 @@ function dsi_render_table($ip, $port, $public_ip, $url = false, $use_table = TRU
 						"\t\t<td align='right' width=30px >\n".
 						"\t\t\t<b>Codes</b>".
 						"\t\t</td>\n".
-						"\t\t<td align='left' ><input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["bb_type_a"]."[img]$base_url/" . DSI_BASEPATH . "image.php?s=${ip}_${port}-${type}.png[/img]".$link["bb_close"]."' /><br />\n".
-						"\t\t\t<input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["bb_type_b"]."[img]$base_url/" . DSI_BASEPATH . "image.php?s=${ip}_${port}-${type}.png[/img]".$link["bb_close"]."' /><br />\n".
-						"\t\t\t<input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["href"]."<img src=\"$base_url/" . DSI_BASEPATH . "image.php?s=${ip}_${port}-${type}.png\">".$link["href_close"]."' />\n".
+						"\t\t<td align='left' ><input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["bb_type_a"]."[img]$base_url/" . DSI_BASEPATH . "s-${ip}_${port}-${type}.png[/img]".$link["bb_close"]."' /><br />\n".
+						"\t\t\t<input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["bb_type_b"]."[img]$base_url/" . DSI_BASEPATH . "s-${ip}_${port}-${type}.png[/img]".$link["bb_close"]."' /><br />\n".
+						"\t\t\t<input type='text' readonly='readonly' style='width:100%;' onclick='select()' value='".$link["href"]."<img src=\"$base_url/" . DSI_BASEPATH . "s-${ip}_${port}-${type}.png\">".$link["href_close"]."' />\n".
 						"\t\t</td>\n";
 		if($use_rows) $output .= "\t</tr>\n";
 	}

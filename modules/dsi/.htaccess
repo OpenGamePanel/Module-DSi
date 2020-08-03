@@ -1,5 +1,4 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	RewriteRule s-(.*)-(.*).png$ image.php?s=$1&type=$2 [NC]
-	RewriteRule s-(.*).png$ image.php?s=$1 [NC]
+	RewriteRule s-(.*)$ ../../index.php?m=dsi&p=image&type=cleared&s=$1 [NC]
 </IfModule>

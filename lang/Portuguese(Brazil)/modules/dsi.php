@@ -22,9 +22,9 @@
  *
  */
 
-define('OGP_LANG_dsi_long', "Dynamic Server Image");
-define('OGP_LANG_dsi_select_server', "Please choose a server from the drop-down list");
-define('OGP_LANG_dsi_admin_long', "Dynamic Server Image Settings");
-define('OGP_LANG_dsi_list', "Dynamic Server Image List");
-define('OGP_LANG_no_game_homes_assigned', "You don't have any servers assigned to your account.");
+define('OGP_LANG_dsi_long', "Imagem Dinâmica do Servidor");
+define('OGP_LANG_dsi_select_server', "Escolha um servidor na lista suspensa");
+define('OGP_LANG_dsi_admin_long', "Configurações da Imagem do Servidor Dinâmico");
+define('OGP_LANG_dsi_list', "Lista de Imagens do Servidor Dinâmico");
+define('OGP_LANG_no_game_homes_assigned', "Você não tem nenhum servidor atribuído à sua conta.");
 ?>

@@ -1,4 +1,23 @@
-Help for Ubuntu systems (For other systems you can find a similar way...).
+Dynamic Server Image for OGP by MadMakz
+
+About:
+Creates updating images about current gameserver server status.
+Similar to the imagesignatures known from GameTracker.com or Game-Monitor.com.
+
+Features:
+- Native OGP Support
+- Image cacheing
+- Supports Game/Mod based backgrounds
+- 3 Sizes
+
+Requirements:
+- PHP-GD module
+- Apache mod_rewrite
+
+https://opengamepanel.org/forum/viewthread.php?thread_id=819
+
+
+### Help for Ubuntu systems (For other systems you can find a similar way...).
 
 1. Use the following command to enable mod_rewrite in Apache:
 

@@ -22,9 +22,9 @@
  *
  */
 
-define('OGP_LANG_dsi_long', "Dynamic Server Image");
-define('OGP_LANG_dsi_select_server', "Please choose a server from the drop-down list");
-define('OGP_LANG_dsi_admin_long', "Dynamic Server Image Settings");
-define('OGP_LANG_dsi_list', "Dynamic Server Image List");
-define('OGP_LANG_no_game_homes_assigned', "You don't have any servers assigned to your account.");
+define('OGP_LANG_dsi_long', "Δυναμική Εικόνα Διακομιστή");
+define('OGP_LANG_dsi_select_server', "Παρακαλώ επιλέξτε έναν διακομιστή από την λίστα.");
+define('OGP_LANG_dsi_admin_long', "Ρυθμίσεις Δυναμικής Εικόνας Διακομιστή");
+define('OGP_LANG_dsi_list', "Λίστα Δυναμικής Εικόνας Διακομιστή");
+define('OGP_LANG_no_game_homes_assigned', "Δεν έχετε διακομιστές ανατεθημένους στον λογαριασμό σας.");
 ?>

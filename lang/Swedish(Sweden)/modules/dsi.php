@@ -22,9 +22,9 @@
  *
  */
 
-define('OGP_LANG_dsi_long', "Dynamic Server Image");
-define('OGP_LANG_dsi_select_server', "Please choose a server from the drop-down list");
-define('OGP_LANG_dsi_admin_long', "Dynamic Server Image Settings");
-define('OGP_LANG_dsi_list', "Dynamic Server Image List");
+define('OGP_LANG_dsi_long', "Dynamisk serverbild");
+define('OGP_LANG_dsi_select_server', "Välj en server från rullgardinsmenyn ");
+define('OGP_LANG_dsi_admin_long', "Dynamiska serverns bildinställningar");
+define('OGP_LANG_dsi_list', "Dynamisk serverbilds lista");
 define('OGP_LANG_no_game_homes_assigned', "You don't have any servers assigned to your account.");
 ?>

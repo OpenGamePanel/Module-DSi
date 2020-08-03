@@ -2,7 +2,7 @@
 /*
  *
  * OGP - Open Game Panel
- * Copyright (C) 2008 - 2017 The OGP Development Team
+ * Copyright (C) 2008 - 2018 The OGP Development Team
  *
  * http://www.opengamepanel.org/
  *
@@ -37,7 +37,7 @@ function exec_ogp_module(){
 	if ( isset($_GET['home_id-mod_id-ip-port']) AND $_GET['home_id-mod_id-ip-port'] == "" )
 		unset( $_GET['home_id-mod_id-ip-port'] );
 	
-	echo dsi_select_server;
+	echo get_lang("dsi_select_server");
 	if (!isset($_GET['home_id-mod_id-ip-port']) and !$online) 
 	{	
 		create_home_selector_address($_GET['m'], $_GET['p'], $server_homes);
@@ -68,7 +68,7 @@ function exec_ogp_module(){
 	
 	echo $show_all ?	"\n<form method='POST' >\n".
 						"\t<button name='online' onClick='this.form.submit()' >".
-						online .
+						get_lang("online") .
 						"</button>\n".
 						"</form>\n".
 						"<br>\n" : "";
@@ -79,7 +79,7 @@ function exec_ogp_module(){
 		$servers++;
 		
 		// Get display IP
-		$public_ip = checkDisplayPublicIP($server_home['display_public_ip'], $server_home['ip']);
+		$public_ip = checkDisplayPublicIP($server_home['display_public_ip'],$server_home['ip'] != $server_home['agent_ip'] ? $server_home['ip'] : $server_home['agent_ip']);
 		
 		$remote = new OGPRemoteLibrary($server_home['agent_ip'], $server_home['agent_port'], $server_home['encryption_key'], $server_home['timeout']);
 		$screen_running = $remote->is_screen_running(OGP_SCREEN_TYPE_HOME,$server_home['home_id']) === 1;
@@ -87,7 +87,7 @@ function exec_ogp_module(){
 		if( ( $online and $screen_running ) OR ( isset( $_GET['home_id-mod_id-ip-port'] ) 
 						 and $_GET['home_id-mod_id-ip-port'] == 
 						 $server_home['home_id'].'-'.$server_home['mod_id'].'-'.
-						 $public_ip.'-'.$server_home['port'] ) OR ( !$online and $show_all ) )	
+						 $server_home['ip'].'-'.$server_home['port'] ) OR ( !$online and $show_all ) )	
 		{
 			$port = $server_home['port'];
 			
@@ -147,11 +147,11 @@ function exec_ogp_module(){
 			
 			if( isset($_GET['home_id-mod_id-ip-port']) )
 			{
-				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, $url, FALSE, TRUE);
+				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $url, FALSE, TRUE);
 			}
 			else
 			{
-				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $public_ip, $url, FALSE, FALSE, FALSE, $screen_running, TRUE, $type);
+				$output .= dsi_render_table($server_home["ip"], $server_home["port"], $url, FALSE, FALSE, FALSE, $screen_running, TRUE, $type);
 			}
 			if ($counter == $cols) 
 			{

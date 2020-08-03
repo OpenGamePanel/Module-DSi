@@ -22,12 +22,11 @@
 
 // Module general information
 $module_title = "Dynamic Server Image";
-$module_version = "1.0.1";
+$module_version = "1.0.3";
 $db_version = 0;
 $module_required = false;
 $module_menus = array( 
 					   array( 'subpage' => 'list_dsi', 'name'=>'DSi List', 'group'=>'guest' ),
-					   array( 'subpage' => 'user_dsi', 'name'=>'DSi', 'group'=>'user' ),
 					   array( 'subpage' => 'admin_dsi', 'name'=>'DSi Settings', 'group'=>'admin' )
 					 );
 ?>
