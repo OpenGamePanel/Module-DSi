@@ -28,7 +28,7 @@ require_once('modules/gamemanager/home_handling_functions.php');
 require_once("modules/config_games/server_config_parser.php");
 require_once('includes/lib_remote.php');
 require_once('protocol/lgsl/lgsl_protocol.php');
-require_once('protocol/GameQ/GameQ.php');
+require_once('protocol/GameQ/Autoloader.php');
 function exec_ogp_module(){
 	global $db;
 	$online = isset( $_POST['online'] ) ? TRUE : FALSE;
