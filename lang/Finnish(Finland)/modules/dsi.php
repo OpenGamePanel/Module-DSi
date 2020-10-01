@@ -22,9 +22,9 @@
  *
  */
 
-define('OGP_LANG_dsi_long', "Dynamic Server Image");
-define('OGP_LANG_dsi_select_server', "Please choose a server from the drop-down list");
-define('OGP_LANG_dsi_admin_long', "Dynamic Server Image Settings");
-define('OGP_LANG_dsi_list', "Dynamic Server Image List");
-define('OGP_LANG_no_game_homes_assigned', "You don't have any servers assigned to your account.");
+define('OGP_LANG_dsi_long', "Dynaaminen palvelimen kuva");
+define('OGP_LANG_dsi_select_server', "Valitse palvelin avattavasta luettelosta");
+define('OGP_LANG_dsi_admin_long', "Dynaaminen palvelimen kuva-asetukset");
+define('OGP_LANG_dsi_list', "Dynaamisen palvelimen kuva-luettelo");
+define('OGP_LANG_no_game_homes_assigned', "Tilillesi ei ole määritetty palvelimia.");
 ?>
