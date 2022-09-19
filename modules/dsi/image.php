@@ -64,7 +64,7 @@ function exec_ogp_module(){
 	if($do_new){		
 		$server_home = $db->getGameHomeByIP($s[0], $s[1]);
 		if(!$server_home){ dsi_error_img("IP: ".$s[0].":".$s[1], "Server does not exist in DB.", $img_type); }
-		
+		$port = $server_home['port'];
 		$cfghome = $db->getCfgHomeById($server_home['home_cfg_id']);
 		$server_xml = read_server_config(SERVER_CONFIG_LOCATION."/".$cfghome['home_cfg_file']);
 		
